@@ -1,4 +1,9 @@
+import keyboard
 from datetime import datetime
 
-current_time = datetime.now().strftime("%H:%M:%S")
-print(current_time)
+def print_time():
+    print(datetime.now().strftime("%H:%M:%S"))
+
+keyboard.add_hotkey("g", print_time)
+
+keyboard.wait()
